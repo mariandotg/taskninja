@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   collectCoverage: true,
   coverageProvider: 'v8',
   collectCoverageFrom: [
@@ -15,9 +15,10 @@ module.exports = {
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
     '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
     '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
@@ -26,3 +27,5 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
 };
+
+module.exports = config;
