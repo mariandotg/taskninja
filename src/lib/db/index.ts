@@ -1,5 +1,5 @@
 import { Database } from '@/models/db/Database';
-import { initializeDb } from './initializeDB';
+import { initializeDb } from './initializeDb';
 import getEnvironmentSpecificDbCredential from '@/utils/getEnvironmentSpecificDbCredential';
 import { dbCredentialsSchema } from '@/models/db/DatabaseCredentials';
 
