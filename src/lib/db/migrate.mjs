@@ -1,5 +1,7 @@
 import { migrate } from 'drizzle-orm/libsql/migrator';
-import { getDb } from '.';
+import dbMethods from './index';
+
+const { getDb } = dbMethods;
 
 const connectionConfig = {
   migrationsFolder: 'src/lib/db/migrations',
