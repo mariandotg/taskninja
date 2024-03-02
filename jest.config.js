@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   collectCoverage: true,
   coverageProvider: 'v8',
   collectCoverageFrom: [
@@ -27,3 +27,5 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
 };
+
+module.exports = config;
