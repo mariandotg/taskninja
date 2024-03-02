@@ -1,4 +1,4 @@
-import { initializeDb } from '../../../src/lib/db/initializeDB';
+import { initializeDb } from '../../../src/lib/db/initializeDb';
 
 describe('initializeDb', () => {
   it('should use "default" mode on test environment', async () => {
