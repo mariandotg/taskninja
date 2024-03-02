@@ -1,6 +1,6 @@
 import getPrefixedEnvVariable from '../../src/utils/getPrefixedEnvVariable';
 
-describe('isModuleInstalled', () => {
+describe('getPrefixedEnvVariable', () => {
   let originalEnv: NodeJS.ProcessEnv;
   const prefix = 'TESTING_PREFIX';
   const key = 'KEY';
@@ -26,7 +26,7 @@ describe('isModuleInstalled', () => {
 
     const prefixedValue = getPrefixedEnvVariable(wrongPrefix, key);
 
-    expect(prefixedValue).toBe(undefined);
+    expect(prefixedValue).toBeUndefined();
   });
 
   it('should work with lowercase prefix and key', () => {
