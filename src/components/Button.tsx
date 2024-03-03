@@ -43,10 +43,9 @@ const Button = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
 Button.displayName = 'Button';
 Button.propTypes = {
-  children: PropTypes.element as PropTypes.Validator<
-    React.ReactElement<any, string | React.JSXElementConstructor<any>>
-  >,
+  children: PropTypes.node as PropTypes.Validator<React.ReactNode>,
   asChild: PropTypes.bool,
+  onClickFn: PropTypes.func as PropTypes.Validator<() => void>,
 };
 
 export default Button;
