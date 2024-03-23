@@ -30,7 +30,7 @@ const NavBar: React.FunctionComponent = async () => {
           </>
         ) : (
           <li>
-            <LoginButton />
+            <LoginButton>Sign in with Google</LoginButton>
           </li>
         )}
       </ul>
