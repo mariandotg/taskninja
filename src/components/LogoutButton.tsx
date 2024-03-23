@@ -5,7 +5,7 @@ import Button from './Button';
 
 const LogoutButton: React.FunctionComponent = () => {
   async function logout() {
-    await signOut({ callbackUrl: '/' });
+    await signOut({ callbackUrl: '/login' });
   }
 
   return <Button onClickFn={logout}>Logout</Button>;
